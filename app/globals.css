@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS custom properties ──────────────────────────────────────────────── */
+:root {
+  --brand:        #f59e0b;
+  --brand-dark:   #92400e;
+  --surface:      #1c1917;
+}
+
+/* ─── Base layer ─────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Remove focus for mouse; keep for keyboard */
+  *:focus { outline: none; }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-amber-400 ring-offset-2 rounded;
+  }
+
+  img { @apply max-w-full; height: auto; }
+
+  /* Brand selection colour */
+  ::selection {
+    background-color: #f59e0b;
+    color: #1c1917;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ─── Component shortcuts ────────────────────────────────────────────────── */
+@layer components {
+  .section-container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400
+           text-stone-950 font-bold px-6 py-3 rounded-xl text-sm tracking-wide
+           transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-stone-700 hover:border-stone-500
+           text-stone-300 hover:text-white px-6 py-3 rounded-xl
+           text-sm font-semibold tracking-wide transition-all duration-200;
+  }
+
+  .card-light {
+    @apply bg-white rounded-2xl border border-stone-200
+           hover:border-amber-300 hover:shadow-xl hover:shadow-amber-500/10
+           transition-all duration-300;
+  }
+
+  .card-dark {
+    @apply bg-stone-900 rounded-2xl border border-stone-800
+           hover:border-stone-700 transition-all duration-300;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold tracking-[0.2em] uppercase;
+  }
+
+  .section-divider {
+    @apply flex items-center gap-3;
+  }
+
+  .amber-rule {
+    @apply h-px w-8 bg-amber-500 flex-shrink-0;
+  }
+}
+
+/* ─── Utilities ──────────────────────────────────────────────────────────── */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .text-balance { text-wrap: balance; }
+}
+
+/* ─── Page fade-in ───────────────────────────────────────────────────────── */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+main { animation: page-in 0.4s ease-out both; }
+
+/* ─── Print ──────────────────────────────────────────────────────────────── */
+@media print {
+  header, footer, [data-floating] { display: none !important; }
+  body   { color: black; background: white; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.75em; color: #555; }
+}

@@ -45,7 +45,7 @@ export const equipment: Equipment[] = [
     name: "Concrete Mixer with Hoist",
     category: "concrete",
     description:
-      "Concrete mixer paired with a petrol-powered material hoist for multi-storey construction. Ideal for projects where concrete needs to be lifted to upper floors.",
+      "Concrete mixer paired with a petrol-powered material hoist and a poker vibrator for multi-storey construction. Ideal for projects where concrete needs to be lifted to upper floors.",
     specifications: {
       "Mixer capacity":  "500 litres",
       "Hoist capacity":  "300 kg",
@@ -53,8 +53,8 @@ export const equipment: Equipment[] = [
       "Lift height":     "Up to 8 floors",
       "Suitable for":    "Multi-storey builds",
     },
-    dailyRate:  "KES 7,500",
-    weeklyRate: "KES 35,000",
+    dailyRate:  "KES 12,000 (inclusive of operators,fuel and logistics fees)",
+    
     image: "/images/projects/mixer-crane-on-site.jpg",
     availability: "available",
     whatsappMessage:
@@ -72,8 +72,8 @@ export const equipment: Equipment[] = [
       "Setup":          "Included",
       "Collection":     "Included",
     },
-    dailyRate:  "KES 1,500",
-    weeklyRate: "KES 6,000",
+    dailyRate:  "KES 4,500",
+    weeklyRate: "KES 27,000",
     image: "/images/equipment/mixer-delivery.jpg",
     availability: "available",
     whatsappMessage:
@@ -84,16 +84,16 @@ export const equipment: Equipment[] = [
     name: "Material Hoist (Green Electric)",
     category: "lifting",
     description:
-      "Electric material hoist for lifting concrete, blocks and construction materials to upper floors on multi-storey sites. Operated from scaffolding platform.",
+      "Gasoline powered material hoist for lifting concrete, blocks and construction materials to upper floors on multi-storey sites. Operated from scaffolding platform.",
     specifications: {
-      "Capacity":    "300 kg",
-      "Power":       "Electric motor",
+      "Capacity":    "1 tonne",
+      "Power":       "Gasolin powered engine Honda GX 270",
       "Colour":      "Green housing",
       "Application": "Multi-storey sites",
       "Scaffolding": "Required (not included)",
     },
-    dailyRate:  "KES 3,500",
-    weeklyRate: "KES 16,000",
+    dailyRate:  "KES 6,500",
+    weeklyRate: "KES 39,000",
     image: "/images/projects/multi-storey-scaffolding.jpg",
     availability: "available",
     whatsappMessage:
@@ -104,15 +104,15 @@ export const equipment: Equipment[] = [
     name: "Concrete Vibrator (50mm)",
     category: "concrete",
     description:
-      "Electric concrete poker vibrator with 50mm head for consolidating poured concrete in columns, beams and slabs. Reduces voids and improves structural integrity.",
+      "Gasoline powered vibrator with 50mm head for consolidating poured concrete in columns, beams and slabs. Reduces voids and improves structural integrity.",
     specifications: {
       "Head diameter": "50 mm",
       "Frequency":     "12,000 rpm",
       "Hose length":   "6 m",
-      "Power":         "Electric, 1.5 kW",
+      "Power":         "Gasoline , GX 160 engine",
     },
-    dailyRate:  "KES 1,200",
-    weeklyRate: "KES 6,000",
+    dailyRate:  "KES 2,500",
+    weeklyRate: "KES 15,000 (inclusive of operators and transport fees)",
     image: "/images/projects/foundation-concrete-pour.jpg",
     availability: "available",
     whatsappMessage:

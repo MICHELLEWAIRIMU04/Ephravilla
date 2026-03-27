@@ -48,7 +48,7 @@ export const equipment: Equipment[] = [
       "Concrete mixer paired with a petrol-powered material hoist and a poker vibrator for multi-storey construction. Ideal for projects where concrete needs to be lifted to upper floors.",
     specifications: {
       "Mixer capacity":  "500 litres",
-      "Hoist capacity":  "300 kg",
+      "Hoist capacity":  "1 tonne",
       "Engine":          "Petrol",
       "Lift height":     "Up to 8 floors",
       "Suitable for":    "Multi-storey builds",

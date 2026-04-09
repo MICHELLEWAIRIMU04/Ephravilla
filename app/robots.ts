@@ -5,6 +5,6 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ephravilla.com";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/", disallow: ["/api/"] }],
-    sitemap: `${BASE}/sitemap.xml`,
+    sitemap: "https://ephravilla.com/sitemap.xml",
   };
 }

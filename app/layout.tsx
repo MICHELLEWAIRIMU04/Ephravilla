@@ -70,6 +70,10 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+
+  verification: {
+    google: "google-site-verification=0NI0FeTK84-IjiTpQGcx9Wyvehp6TUr0lzt3L4Woh9o",
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

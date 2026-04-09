@@ -5,6 +5,8 @@ import { projects } from "@/lib/data/projects";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ephravilla.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = "https://ephravilla.com";
+  
   const now = new Date();
 
   const statics: MetadataRoute.Sitemap = [
